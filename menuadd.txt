@@ -1,0 +1,36 @@
+/*Updated*/
+@media screen and (max-width: 1056px) {
+  #imgs {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-images {
+    margin: 0;
+  }
+}
+
+.menu-image {
+  height: 20%;
+  width: 20%;
+  box-shadow: 8px 1px 7px grey;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-top: 0.5%;
+  margin-bottom:0.5%;
+}
+
+
+#imgs {
+  background-color: #f3f3f3;
+  height: 100%;
+  padding: 50px 20px 50px 20px;
+  width: 80%;
+  margin-top: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: auto;
+  border-radius: 35px;
+  box shadow: 12px 1px 10px grey;
+  display: flex;
+  justify-content: center;
+}
