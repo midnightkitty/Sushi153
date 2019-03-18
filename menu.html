@@ -2,42 +2,109 @@
 <html>
 
 <head>
-  <title>SUSHI 153 Menu</title>
+  <title>SUSHI 153</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
-<body id="menu-background">
+<body>
   <ul class="navbar">
     <li>
       <a href="index.html">
-        <img src="images/home.png">
+        <img class="navImg" src="images/home.png">
       </a>
     </li>
     <li>
       <a href="about.html">
-        <img src="images/about.png">
+        <img class="navImg" src="images/about.png">
       </a>
     </li>
     <li>
       <a href="menu.html">
-        <img src="images/menu.png">
+        <img class="navImg" src="images/menu.png">
       </a>
     </li>
     <li>
       <a href="contact.html">
-        <img src="images/contact.png">
+        <img class="navImg" src="images/contact.png">
       </a>
     </li>
   </ul>
 
-  <div id="imgs">
-    <img src="images/2.jpg" alt="Soup and Salad Menu" class="menu-image">
-    <img src="images/3.jpg" alt="Meat Menu" class="menu-image">
-    <img src="images/4.jpg" alt="Maki Sushi Menu Pt 1" class="menu-image">
-    <img src="images/5.jpg" alt="Maki Sushi menu Pt 2 and Vegetable Roll Menu" class="menu-image">
-    <img src="images/6.jpg" alt="Miscellaneous Sushi and Dessert Menu" class="menu-image">
+  <div id="menuImageContainer">
+    <img src="images/2.jpg" alt="Soup and Salad Menu" class="menu-image" id="img1">
+    <img src="images/3.jpg" alt="Meat Menu" class="menu-image" id="img2">
+    <img src="images/4.jpg" alt="Maki Sushi Menu Pt 1" class="menu-image" id="img3">
+    <img src="images/5.jpg" alt="Maki Sushi menu Pt 2 and Vegetable Roll Menu" class="menu-image" id="img4">
+    <img src="images/6.jpg" alt="Miscellaneous Sushi and Dessert Menu" class="menu-image" id="img5">
   </div>
+
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+
+  <div class="footer">
+    <ul class="footerList">
+      <li><a href="https://www.instagram.com/153sushi/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="https://www.facebook.com/fujisushistl/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="https://www.yelp.com/biz/153-sushi-saint-louis-2" target="_blank"><i class="fab fa-yelp"></i></a></li>
+      <li><a href="https://foursquare.com/v/fuji-sushi-and-teriyaki/4baa9fe4f964a520a17a3ae3" target="_blank"><i class="fab fa-foursquare"></i></a></li>
+    </ul>
+    <a id="hiring" href="#hiring">
+      <h3>Now Hiring!</h3>
+    </a>
+  </div>
+  <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+
+
+    var img1 = document.getElementById('img1');
+    var img2 = document.getElementById('img2');
+    var img3 = document.getElementById('img3');
+    var img4 = document.getElementById('img4');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img1.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+    img2.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+    img3.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+    img4.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+    img5.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+  </script>
 </body>
 
 </html>
